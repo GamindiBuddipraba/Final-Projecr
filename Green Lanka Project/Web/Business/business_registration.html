@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up with Green Lanka</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css https://www.pngwing.com/en/free-png-njlrg/download-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Mail js link-->
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Register Your Business with </h2>
+                        <h2 class="form-title" style="color:rgb(7, 192, 78)">Green Lanka</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Business Owner Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="bname" id="bname" placeholder="Business Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
+                            </div>
+                            
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/bg-theme3.jpg" alt="sing up image">
+                            <img src="images/bus-reg.png" alt="sing up image">
+                        </figure>
+                        <a href="login.html" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+	
+	<script>
+		var firebaseConfig = {
+            apiKey: "AIzaSyDugFU8k8Oi9Uds1fai2EvrRDyM7R7_jDs",
+            authDomain: "green-lanka-9257f.firebaseapp.com",
+            databaseURL: "https://green-lanka-9257f-default-rtdb.firebaseio.com",
+            projectId: "green-lanka-9257f",
+            storageBucket: "green-lanka-9257f.appspot.com",
+            messagingSenderId: "212171362642",
+            appId: "1:212171362642:web:458981c531ba48dc2baa8b",
+            measurementId: "G-90G73D2TPL"
+			  };
+
+		firebase.initializeApp(firebaseConfig);
+
+        var messagesRef = firebase.database().ref('Business');
+		
+		
+		document.getElementById('register-form').addEventListener('submit', submitForm);
+
+		function submitForm(e) {
+			e.preventDefault();
+            // Get values
+
+            var pass = getInputVal('pass');
+            var repass = getInputVal('re_pass');
+            var name = getInputVal('name');
+			var email = getInputVal('email');
+            var bname = getInputVal('bname');
+            if(name==="" || email==="" || bname==="" || pass==="" || repass==="")
+            {
+                
+                alert("Please fill all the fields!")
+            }
+            else
+            if(pass===repass){
+                
+             //auto id
+            var bid = "bid-" + Math.random().toString(8).slice(2);
+            
+            saveMessage(name, email,bname,pass,bid);
+
+            Email.send({
+            Host:"smtp.gmail.com",
+            Username:'codebysl@gmail.com',
+            Password: "cnkqzbphhwbmdptt",
+            To : email,
+            From : "codebysl@gmail.com",
+            Subject : "Security Alert from Green Lanka",
+            Body : " Registration was succesfully . Business Id : "+bid,
+            
+            }).then(
+            message => alert(message + " ! Please check your given email inbox.")
+            );
+           
+			document.getElementById('register-form').reset();
+        
+       
+            }
+            else
+            {
+                alert("Check passwords!")
+            }
+
+			
+
+           
+            
+		}
+
+		// Function to get get form values
+		function getInputVal(id) {
+			return document.getElementById(id).value;
+		}
+
+        
+
+		// Save message to firebase
+		function saveMessage(name, email,bname,pass,bid) {
+			var newMessageRef = messagesRef.ref.child(bid);
+			newMessageRef.set({
+				name: name,
+				email: email,
+                bname:bname,
+                pass:pass,
+                bid:bid,
+                
+			});
+
+            
+		}
+       
+        
+	</script>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

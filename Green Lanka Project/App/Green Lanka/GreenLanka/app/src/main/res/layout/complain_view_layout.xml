@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/get_bg_area_2"
+        android:padding="10dp">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:text="@string/complain"
+                    android:textColor="@color/black"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_comp_desc"
+                    android:hint="type"
+                    android:textColor="@color/black"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:text="@string/contact_number"
+                    android:textColor="@color/black"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_comp_contact"
+                    android:hint="description"
+                    android:textColor="@color/black"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+            </TableRow>
+
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

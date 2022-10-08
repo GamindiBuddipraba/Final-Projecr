@@ -1,0 +1,132 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-image:url('../images/business.jfif');
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 55%;
+  height: auto;
+
+  background-color: rgb(128, 240, 156);
+  border-radius: 10px;
+  outline: 1px solid #fff;
+  outline-offset: 3px;
+  -moz-outline-radius: 10px;
+
+}
+
+#title_container {
+  width: 100%;
+  height: 5%;
+
+  text-align: center;
+  float: left;
+  margin: 0;
+
+  color: #003049;
+  text-transform: uppercase;
+  font-family: Verdana;
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  color: #003049;
+}
+
+
+#form_container {
+  width: 80%;
+  height: 20%;
+
+  float: left;
+  margin-top: 2px;
+  padding-left: 100px;
+  padding-right: 50px;
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+}
+
+#form_container * {
+  width: 50%;
+  height: 30px;
+
+  border: none;
+  outline: none;
+  /*border-left: 2px solid #0c7552;*/
+  background-color: #ffffffb9;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  margin-top: 20px;
+  float: left;
+
+}
+
+
+
+#button_container {
+  width: 100%;
+  height: 5%;
+
+  text-align: center;
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  font-family: Verdana;
+
+}
+
+#submit {
+  width: 25%;
+  height: 35px;
+
+  background-color: #D62828;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+
+#content {
+  width: 105px;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+  float: left;
+
+  color: #D62828;
+  margin-right: 5px;
+}
+
+.typedtext {
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #D62828;
+
+}
+

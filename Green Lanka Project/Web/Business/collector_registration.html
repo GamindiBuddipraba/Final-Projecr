@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>green lanka</title>
+
+  
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="css/stylerc.css">
+
+    <!--Mail js link-->
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    
+</head>
+<body style="background-image:url('images/coverNew.jpg'); background-repeat: no-repeat; background-size:cover;">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-image">
+                    <h1 style="color:black; text-align: center; ">Welcome</h2>
+                    <h2 style="color:Green;">Green Lanka</h2>
+					<img class="booking-img" src="images/image2.jpg" alt="Booking Image">
+                </div>
+                <div class="booking-form">
+                    <form id="booking-form">
+                        <h2>Collector Registration</h2>
+						
+	                    <p>Personal Details :</p>
+                         <hr>
+						
+						  
+                          <input type="text" placeholder="Business ID:" name="Business_ID" id="Business_ID" required>
+	
+	                      
+                          <input type="text" placeholder="Business_Name" name="Business_Name" id="Business_Name" required>
+	
+                          <input type="text" placeholder="Enter Collector ID" name="Collector_ID" id="Collector_ID" required>
+
+                         
+                          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+	
+	                 
+                          <input type="password" placeholder="Password" name="pass" id="pass" required>
+
+                          <input type="password" placeholder="Confirm Password" name="repass" id="repass" required>
+
+						  
+						  <hr>
+    
+                        <button type="submit" id="submit" class="registerbtn">Register</button>
+                         
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+	
+	<script>
+		var firebaseConfig = {
+            apiKey: "AIzaSyDugFU8k8Oi9Uds1fai2EvrRDyM7R7_jDs",
+            authDomain: "green-lanka-9257f.firebaseapp.com",
+            databaseURL: "https://green-lanka-9257f-default-rtdb.firebaseio.com",
+            projectId: "green-lanka-9257f",
+            storageBucket: "green-lanka-9257f.appspot.com",
+            messagingSenderId: "212171362642",
+            appId: "1:212171362642:web:458981c531ba48dc2baa8b",
+            measurementId: "G-90G73D2TPL"
+			  };
+              
+		firebase.initializeApp(firebaseConfig);
+        
+
+        var messagesRef = firebase.database().ref('Collector');
+		
+		
+		document.getElementById('booking-form').addEventListener('submit', submitForm);
+        
+		function submitForm(e) {
+            
+			e.preventDefault();
+
+			// Get values
+			var Business_ID = getInputVal('Business_ID');
+			var Business_Name = getInputVal('Business_Name');
+            var Collector_ID = getInputVal('Collector_ID');
+            var email = getInputVal('email');
+            var pass = getInputVal('pass');
+            var repass = getInputVal('repass');
+
+            if(Business_ID==="" || Business_Name==="" || Collector_ID==="" || email==="" || pass==="" || repass==="")
+            {
+                
+                alert("Please fill all the fields!")
+            }
+            else 
+            if(pass===repass)
+            {
+           
+            
+			saveMessage(Business_ID,Business_Name,Collector_ID,email,pass );
+
+            alert(" Registration Successfully.")
+            window.location.replace("business_my_business_details.html");
+            
+            
+			document.getElementById('booking-form').reset();
+
+        }
+        else
+        {
+            alert("Check passwords!")
+        }
+            
+		}
+
+		// Function to get get form values
+		function getInputVal(id) {
+			return document.getElementById(id).value;
+		}
+
+        
+
+		// Save message to firebase
+		function saveMessage(Business_ID,Business_Name,Collector_ID,telephone,pass) {
+			var newMessageRef = messagesRef.ref.child(Collector_ID);
+			newMessageRef.set({
+				Business_ID:Business_ID,
+				Business_Name:Business_Name,
+                Collector_ID:Collector_ID,
+                email:email,
+               pass:pass,
+			});
+		}
+       
+        
+	</script>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+</body>
+</html>

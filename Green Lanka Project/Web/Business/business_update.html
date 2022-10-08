@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Update business details</title>
+    <link rel="stylesheet" href="css/mybusinessu.css">
+    <link rel="stylesheet" href="nav.css">
+    <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">Green Lanka</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="business_my_business_details.html">View</a></li>
+          <li><a class="nav-link scrollto active" href="business_update.html">Update</a></li>
+          <li><a class="nav-link scrollto" href="collector_registration.html">Collector Registration</a></li>
+          <li><a class="nav-link scrollto" href="handleComplain.html">Complains</a></li>
+          <li><a class="nav-link scrollto" href="feedback.html">Feedback</a></li>
+          <li><a class="nav-link scrollto" href="chat.html">Chat</a></li>
+          <li><a class="nav-link scrollto" href="login.html">Log out</a></li> 
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <div id="container">
+      <h1 style="color:rgb(7, 192, 78); margin-left: 250px; margin-top: 50px; align-items: center;">My Business Page </h1><br>
+      <div id="form_container">
+            <p> Business id : </p > <input type="text" id="bid" required/>
+            <p> Business Name : </p > <input type="text" id="bname" required />
+            <p> Business Owner Name : </p><input type="text" id="name" required />
+            <p> Business Email : </p><input type="email" id="email" required />
+            <p> Business Password : </p><input type="password" id="pass" required />
+            <p> Confirm Password : </p><input type="password" id="cpass" required />
+
+        </div>
+        <div id="button_container">
+            <button  id="submit" onclick="update()"> UPDATE </button>
+      </div>
+      </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="js/index.js"></script>
+  
+
+</html>

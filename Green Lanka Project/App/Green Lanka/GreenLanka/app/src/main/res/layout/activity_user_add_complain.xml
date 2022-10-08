@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Add_Complain"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    android:background="@drawable/bg_get_start"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
+                app:navigationIcon="@drawable/menu" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/add_complain"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lyt_set_location"
+                android:layout_marginTop="40dp"
+                android:layout_width="333dp"
+                android:background="@drawable/get_bg_area"
+                android:layout_height="440dp"
+                android:padding="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/txtCollectorID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="14"
+                    android:hint="@string/collector_id"
+                    android:padding="5dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/txtComplainUAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="136dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="14"
+                    android:inputType="textMultiLine"
+                    android:lines="10"
+                    android:minLines="5"
+                    android:maxLines="10"
+                    android:hint="@string/enter_complain"
+                    android:padding="5dp"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/txtContactUAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center"
+                    android:maxLength="10"
+                    android:background="@drawable/rounded_edit_text"
+                    android:ems="14"
+                    android:hint="@string/enter_contact_number"
+                    android:padding="5dp"
+                    android:textColor="@color/black" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnSendUAC"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/send" />
+
+                    <Button
+                        android:id="@+id/btnCancelUAC"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/cancel" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

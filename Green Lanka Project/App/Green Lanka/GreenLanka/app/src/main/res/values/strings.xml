@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Green Lanka</string>
+    <string name="join_with_green_lanka">"Join with \nGreen Lanka"</string>
+    <string name="you_are">You are</string>
+    <string name="user">User</string>
+    <string name="collector">Collector</string>
+    <string name="get_start">Get Start</string>
+    <string name="welcome_to_green_lanka">Welcome to Green Lanka</string>
+    <string name="collector_login">Collector Login</string>
+    <string name="enter_business_id">Enter Business Id</string>
+    <string name="enter_user_id">Enter User Id</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="new_user_register_here">New User? Register here</string>
+    <string name="ready_to_join_with_new_customers">Ready to join\nwith new Customers?</string>
+    <string name="sign_up_here">Sign Up Here</string>
+    <string name="enter_business_name">Enter Business Name</string>
+    <string name="enter_user_name">Enter User Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="please_click_here_for_login">Please click here for login</string>
+    <string name="green_lanka">Green Lanka</string>
+    <string name="have_a_nice_day">Have a Nice day!</string>
+    <string name="request">Request</string>
+    <string name="complain">Complain</string>
+    <string name="any_issue_please_contact_us">any issue? Please contact us</string>
+    <string name="user_login">User Login</string>
+    <string name="ready_to_earn_n_money_from_your_garbage">Ready to earn \n Money From your Garbage?</string>
+    <string name="map">Map</string>
+    <string name="our_place">Our Place</string>
+    <string name="profile">Profile</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="next">Next</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="home">Home</string>
+    <string name="collect">Collect</string>
+    <string name="ny_complains">My Complains</string>
+    <string name="logout">Logout</string>
+    <string name="add_item">Add Item</string>
+    <string name="add_complain">Add Complain</string>
+    <string name="set_location">Set Location</string>
+    <string name="set">Set</string>
+    <string name="latitude">Latitude:</string>
+    <string name="ss">-</string>
+    <string name="longitude">Longitude:</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_quantity">Enter Quantity</string>
+
+    <string-array name="spinnerItems">
+        <item>Metals and tins</item>
+        <item>Glass and ceramic</item>
+        <item>Polythene and plastic</item>
+        <item>Organic waste - liquid</item>
+        <item>Organic waste - solid</item>
+        <item>Non organic - Other</item>
+    </string-array>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="see_on_map">See on Map</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="collector_id">Collector ID</string>
+    <string name="collect_items">Collect Items</string>
+    <string name="enter_contact_number">Enter Contact Number</string>
+    <string name="enter_complain">Enter Complain</string>
+    <string name="view_complains">View Complains</string>
+    <string name="enter_collector_id">Enter Collector ID</string>
+    <string name="view_items">View Items</string>
+    <string name="item_type">Item Type:</string>
+    <string name="description">Description:</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="address">Address:</string>
+    <string name="thank_you">Thank You...!</string>
+    <string name="give_us_a_feedback">Give us a FeedBack</string>
+
+</resources>
